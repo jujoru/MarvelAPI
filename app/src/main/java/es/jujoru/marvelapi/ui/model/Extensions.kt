@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import com.bumptech.glide.Glide
-import com.squareup.picasso.Picasso
+import java.security.MessageDigest
 
 fun ImageView.loadImageFromUrl(path: String,ext: String){
     Log.i("aaa","$path/standard_medium.$ext")
@@ -25,7 +25,12 @@ inline fun <reified T: Activity> Context.intentFor(body: Intent.()-> Unit): Inte
 inline fun <reified T: Activity> Context.startActivity(body: Intent.()-> Unit){
     startActivity(intentFor<T>(body))
 }
-
+fun String.md5():String {
+        val bytes = MessageDigest.getInstance("MD5").digest(this.toByteArray())
+        return bytes.joinToString("") {
+            "%02x".format(it)
+        }
+    }
 @Suppress("UNCHECKED_CAST")
 inline fun <reified T : ViewModel> FragmentActivity.getViewModel(crossinline factory: () -> T): T {
 

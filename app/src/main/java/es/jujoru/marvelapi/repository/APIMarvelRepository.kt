@@ -11,10 +11,5 @@ class APIMarvelRepository (activity: Activity) {
 
     suspend fun getCharacters() =
         APIMarvel.service
-            .listCharacters(
-                Constants.PARAMS_TS,
-                Constants.PARAMS_API_PUBLIC,
-                Constants.PARAMS_HASH
-
-            )
+            .listCharacters()
 }

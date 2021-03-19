@@ -16,12 +16,13 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "API_KEY_PRIVATE", "\"cb10389acb90a43ccf2450703f77663fcde568af\""
     }
     buildFeatures{
         dataBinding true
     }
+
     buildTypes {
         release {
             minifyEnabled false

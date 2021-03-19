@@ -6,8 +6,6 @@ import androidx.databinding.BindingAdapter
 import es.jujoru.marvelapi.R
 import es.jujoru.marvelapi.model.Thumbnail
 import es.jujoru.marvelapi.ui.model.loadImageFromUrl
-import es.jujoru.marvelapi.utils.Utils
-import java.security.cert.Extension
 
 @BindingAdapter("setImageCharacter")
 fun ImageView.setImageCharacter(item: Thumbnail){
