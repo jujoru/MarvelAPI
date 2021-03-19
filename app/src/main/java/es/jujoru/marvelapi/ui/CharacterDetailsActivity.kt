@@ -51,10 +51,5 @@ class CharacterDetailsActivity : AppCompatActivity(), StructViewData {
 
       private fun updateUI() {
         binding.character = character
-       // binding.ivCharactersDetailsImage.loadImageFromUrl(character.thumbnail.path, character.thumbnail.extension)
-          Glide.with(this).
-          load("http://via.placeholder.com/150").
-          into(binding.ivCharactersDetailsImage)
-
       }
 }

@@ -16,6 +16,9 @@
     android:id="@+id/cv_characters"
     android:layout_width="match_parent"
     android:layout_height="200dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     android:onClick="@{() -> clickListener.onClick(character)}"
@@ -32,6 +35,8 @@
             android:layout_height="0dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+
+            app:setImageCharacter="@{character.thumbnail}"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,17 +46,20 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="75dp"
             android:background="@color/red"
+            android:gravity="center"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:gravity="center_vertical|center_horizontal"
+
                 android:text="@{character.name}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textColor="@color/white" />

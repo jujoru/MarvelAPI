@@ -13,10 +13,12 @@ import com.bumptech.glide.Glide
 import java.security.MessageDigest
 
 fun ImageView.loadImageFromUrl(path: String,ext: String){
-    Log.i("aaa","$path/standard_medium.$ext")
-    Glide.with(context).
-    load("https://via.placeholder.com/150").
-    into(this)
+
+        Glide.with(context).
+        load("$path/standard_large.$ext").
+        into(this)
+
+
 
 }
 inline fun <reified T: Activity> Context.intentFor(body: Intent.()-> Unit): Intent =

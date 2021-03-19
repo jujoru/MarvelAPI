@@ -27,7 +27,6 @@ class CharactersAdapter(val clickListener: CharactersListener): ListAdapter<Char
         fun bind(item: Character, clickListener: CharactersListener) {
 
             binding.character = item
-            binding.itemIvHeader.loadImageFromUrl(item.thumbnail.path,item.thumbnail.extension)
             binding.clickListener = clickListener
             binding.executePendingBindings()
 
