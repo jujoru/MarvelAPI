@@ -8,5 +8,5 @@ data class DataResponse(
     @SerializedName("limit") val limit: Int,
     @SerializedName("total") val total: Int,
     @SerializedName("count") val count: Int,
-    @SerializedName("result") val result: List<Character>
+    @SerializedName("results") val result: List<Character>
 )
